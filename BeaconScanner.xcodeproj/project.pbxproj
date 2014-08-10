@@ -14,14 +14,14 @@
 		59BC2D6D19976B1900D08B56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BC2D6C19976B1900D08B56 /* main.m */; };
 		59BC2D7119976B1900D08B56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BC2D7019976B1900D08B56 /* AppDelegate.m */; };
 		59BC2D7419976B1900D08B56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59BC2D7219976B1900D08B56 /* Main.storyboard */; };
-		59BC2D7719976B1900D08B56 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BC2D7619976B1900D08B56 /* MasterViewController.m */; };
-		59BC2D7A19976B1900D08B56 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BC2D7919976B1900D08B56 /* DetailViewController.m */; };
 		59BC2D7C19976B1900D08B56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59BC2D7B19976B1900D08B56 /* Images.xcassets */; };
 		59BC2D8319976B1900D08B56 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D8219976B1900D08B56 /* XCTest.framework */; };
 		59BC2D8419976B1900D08B56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6019976B1900D08B56 /* Foundation.framework */; };
 		59BC2D8519976B1900D08B56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6419976B1900D08B56 /* UIKit.framework */; };
 		59BC2D8D19976B1900D08B56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59BC2D8B19976B1900D08B56 /* InfoPlist.strings */; };
 		59BC2D8F19976B1900D08B56 /* BeaconScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BC2D8E19976B1900D08B56 /* BeaconScannerTests.m */; };
+		59BC2D9A199773D500D08B56 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BC2D99199773D500D08B56 /* ScanViewController.m */; };
+		59BC2D9D1997783F00D08B56 /* APLDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BC2D9C1997783F00D08B56 /* APLDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +46,16 @@
 		59BC2D6F19976B1900D08B56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59BC2D7019976B1900D08B56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		59BC2D7319976B1900D08B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		59BC2D7519976B1900D08B56 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		59BC2D7619976B1900D08B56 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		59BC2D7819976B1900D08B56 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		59BC2D7919976B1900D08B56 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		59BC2D7B19976B1900D08B56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		59BC2D8119976B1900D08B56 /* BeaconScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BC2D8219976B1900D08B56 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		59BC2D8A19976B1900D08B56 /* BeaconScannerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeaconScannerTests-Info.plist"; sourceTree = "<group>"; };
 		59BC2D8C19976B1900D08B56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		59BC2D8E19976B1900D08B56 /* BeaconScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconScannerTests.m; sourceTree = "<group>"; };
+		59BC2D98199773D500D08B56 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		59BC2D99199773D500D08B56 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		59BC2D9B1997783F00D08B56 /* APLDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLDefaults.h; sourceTree = "<group>"; };
+		59BC2D9C1997783F00D08B56 /* APLDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLDefaults.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +117,11 @@
 			children = (
 				59BC2D6F19976B1900D08B56 /* AppDelegate.h */,
 				59BC2D7019976B1900D08B56 /* AppDelegate.m */,
+				59BC2D9B1997783F00D08B56 /* APLDefaults.h */,
+				59BC2D9C1997783F00D08B56 /* APLDefaults.m */,
+				59BC2D98199773D500D08B56 /* ScanViewController.h */,
+				59BC2D99199773D500D08B56 /* ScanViewController.m */,
 				59BC2D7219976B1900D08B56 /* Main.storyboard */,
-				59BC2D7519976B1900D08B56 /* MasterViewController.h */,
-				59BC2D7619976B1900D08B56 /* MasterViewController.m */,
-				59BC2D7819976B1900D08B56 /* DetailViewController.h */,
-				59BC2D7919976B1900D08B56 /* DetailViewController.m */,
 				59BC2D7B19976B1900D08B56 /* Images.xcassets */,
 				59BC2D6719976B1900D08B56 /* Supporting Files */,
 			);
@@ -255,9 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59BC2D7119976B1900D08B56 /* AppDelegate.m in Sources */,
-				59BC2D7719976B1900D08B56 /* MasterViewController.m in Sources */,
+				59BC2D9D1997783F00D08B56 /* APLDefaults.m in Sources */,
+				59BC2D9A199773D500D08B56 /* ScanViewController.m in Sources */,
 				59BC2D6D19976B1900D08B56 /* main.m in Sources */,
-				59BC2D7A19976B1900D08B56 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
