@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="1071" y="372"/>
         </scene>
-        <!--Table View Controller-->
+        <!--View Controller-->
         <scene sceneID="H7O-Zz-Ut8">
             <objects>
-                <tableViewController id="f5A-Z9-G2I" sceneMemberID="viewController">
+                <tableViewController id="f5A-Z9-G2I" customClass="UUIDViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qAw-lY-9Kg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
