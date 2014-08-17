@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="1071" y="372"/>
         </scene>
-        <!--View Controller-->
+        <!--UUID View Controller - UUID List-->
         <scene sceneID="H7O-Zz-Ut8">
             <objects>
-                <tableViewController id="f5A-Z9-G2I" customClass="UUIDViewController" sceneMemberID="viewController">
+                <tableViewController id="f5A-Z9-G2I" userLabel="UUID View Controller - UUID List" customClass="UUIDViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qAw-lY-9Kg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,11 +139,11 @@
                             <outlet property="delegate" destination="f5A-Z9-G2I" id="Aq3-xR-Ytl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="149-uz-y8r"/>
+                    <navigationItem key="navigationItem" title="UUID List" id="149-uz-y8r"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xO-YD-cE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="-314"/>
+            <point key="canvasLocation" x="1071" y="-332"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
