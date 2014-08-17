@@ -10,7 +10,7 @@
 		5955BCEA199E80A2006BF2A2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5955BCE9199E80A2006BF2A2 /* libsqlite3.dylib */; };
 		5955BCED199E83D2006BF2A2 /* UUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5955BCEC199E83D2006BF2A2 /* UUIDViewController.m */; };
 		5955BCF0199E8AE9006BF2A2 /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5955BCEF199E8AE9006BF2A2 /* Beacon.m */; };
-		5955BCF3199E8D38006BF2A2 /* DbUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5955BCF2199E8D38006BF2A2 /* DbUtil.m */; };
+		59A9418719A0D14F0018523D /* DbUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A9418619A0D14F0018523D /* DbUtil.m */; };
 		59BC2D6119976B1900D08B56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6019976B1900D08B56 /* Foundation.framework */; };
 		59BC2D6319976B1900D08B56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6219976B1900D08B56 /* CoreGraphics.framework */; };
 		59BC2D6519976B1900D08B56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6419976B1900D08B56 /* UIKit.framework */; };
@@ -44,8 +44,8 @@
 		5955BCEC199E83D2006BF2A2 /* UUIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDViewController.m; sourceTree = "<group>"; };
 		5955BCEE199E8AE9006BF2A2 /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beacon.h; sourceTree = "<group>"; };
 		5955BCEF199E8AE9006BF2A2 /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beacon.m; sourceTree = "<group>"; };
-		5955BCF1199E8D38006BF2A2 /* DbUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DbUtil.h; path = ../DbUtil.h; sourceTree = "<group>"; };
-		5955BCF2199E8D38006BF2A2 /* DbUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DbUtil.m; path = ../DbUtil.m; sourceTree = "<group>"; };
+		59A9418519A0D14F0018523D /* DbUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbUtil.h; sourceTree = "<group>"; };
+		59A9418619A0D14F0018523D /* DbUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DbUtil.m; sourceTree = "<group>"; };
 		59BC2D5D19976B1900D08B56 /* BeaconScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BC2D6019976B1900D08B56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59BC2D6219976B1900D08B56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +128,8 @@
 		59BC2D6619976B1900D08B56 /* BeaconScanner */ = {
 			isa = PBXGroup;
 			children = (
+				59A9418519A0D14F0018523D /* DbUtil.h */,
+				59A9418619A0D14F0018523D /* DbUtil.m */,
 				59BC2D6F19976B1900D08B56 /* AppDelegate.h */,
 				59BC2D7019976B1900D08B56 /* AppDelegate.m */,
 				59BC2D9B1997783F00D08B56 /* APLDefaults.h */,
@@ -139,8 +141,6 @@
 				5955BCEC199E83D2006BF2A2 /* UUIDViewController.m */,
 				5955BCEE199E8AE9006BF2A2 /* Beacon.h */,
 				5955BCEF199E8AE9006BF2A2 /* Beacon.m */,
-				5955BCF1199E8D38006BF2A2 /* DbUtil.h */,
-				5955BCF2199E8D38006BF2A2 /* DbUtil.m */,
 				59BC2D7B19976B1900D08B56 /* Images.xcassets */,
 				59BC2D6719976B1900D08B56 /* Supporting Files */,
 			);
@@ -280,9 +280,9 @@
 				59BC2D7119976B1900D08B56 /* AppDelegate.m in Sources */,
 				59BC2D9D1997783F00D08B56 /* APLDefaults.m in Sources */,
 				5955BCF0199E8AE9006BF2A2 /* Beacon.m in Sources */,
-				5955BCF3199E8D38006BF2A2 /* DbUtil.m in Sources */,
 				59BC2D9A199773D500D08B56 /* ScanViewController.m in Sources */,
 				59BC2D6D19976B1900D08B56 /* main.m in Sources */,
+				59A9418719A0D14F0018523D /* DbUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
