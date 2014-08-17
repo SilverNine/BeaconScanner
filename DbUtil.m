@@ -117,7 +117,7 @@
     
     if (sqlite3_open(dbpath, &mySqliteDB) == SQLITE_OK)
     {
-        NSString *querySQL = @"SELECT id, name, department, age FROM EMPLOYEES";
+        NSString *querySQL = @"SELECT id, name, department, age FROM BEACONS";
         const char *query_stmt = [querySQL UTF8String];
         
         if (sqlite3_prepare_v2(mySqliteDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
