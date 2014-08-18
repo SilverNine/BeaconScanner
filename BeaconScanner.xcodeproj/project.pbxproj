@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5955BCEA199E80A2006BF2A2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5955BCE9199E80A2006BF2A2 /* libsqlite3.dylib */; };
+		592E6CAE19A2410500C1E4E0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592E6CAD19A2410500C1E4E0 /* CoreData.framework */; };
 		5955BCED199E83D2006BF2A2 /* UUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5955BCEC199E83D2006BF2A2 /* UUIDViewController.m */; };
 		5955BCF0199E8AE9006BF2A2 /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5955BCEF199E8AE9006BF2A2 /* Beacon.m */; };
-		59A9418719A0D14F0018523D /* DbUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A9418619A0D14F0018523D /* DbUtil.m */; };
 		59BC2D6119976B1900D08B56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6019976B1900D08B56 /* Foundation.framework */; };
 		59BC2D6319976B1900D08B56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6219976B1900D08B56 /* CoreGraphics.framework */; };
 		59BC2D6519976B1900D08B56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6419976B1900D08B56 /* UIKit.framework */; };
@@ -39,13 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		592E6CAD19A2410500C1E4E0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5955BCE9199E80A2006BF2A2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5955BCEB199E83D2006BF2A2 /* UUIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDViewController.h; sourceTree = "<group>"; };
 		5955BCEC199E83D2006BF2A2 /* UUIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDViewController.m; sourceTree = "<group>"; };
 		5955BCEE199E8AE9006BF2A2 /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beacon.h; sourceTree = "<group>"; };
 		5955BCEF199E8AE9006BF2A2 /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beacon.m; sourceTree = "<group>"; };
-		59A9418519A0D14F0018523D /* DbUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbUtil.h; sourceTree = "<group>"; };
-		59A9418619A0D14F0018523D /* DbUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DbUtil.m; sourceTree = "<group>"; };
 		59BC2D5D19976B1900D08B56 /* BeaconScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BC2D6019976B1900D08B56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59BC2D6219976B1900D08B56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5955BCEA199E80A2006BF2A2 /* libsqlite3.dylib in Frameworks */,
+				592E6CAE19A2410500C1E4E0 /* CoreData.framework in Frameworks */,
 				59BC2D6319976B1900D08B56 /* CoreGraphics.framework in Frameworks */,
 				59BC2D6519976B1900D08B56 /* UIKit.framework in Frameworks */,
 				59BC2D6119976B1900D08B56 /* Foundation.framework in Frameworks */,
@@ -116,6 +114,7 @@
 		59BC2D5F19976B1900D08B56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				592E6CAD19A2410500C1E4E0 /* CoreData.framework */,
 				5955BCE9199E80A2006BF2A2 /* libsqlite3.dylib */,
 				59BC2D6019976B1900D08B56 /* Foundation.framework */,
 				59BC2D6219976B1900D08B56 /* CoreGraphics.framework */,
@@ -128,8 +127,6 @@
 		59BC2D6619976B1900D08B56 /* BeaconScanner */ = {
 			isa = PBXGroup;
 			children = (
-				59A9418519A0D14F0018523D /* DbUtil.h */,
-				59A9418619A0D14F0018523D /* DbUtil.m */,
 				59BC2D6F19976B1900D08B56 /* AppDelegate.h */,
 				59BC2D7019976B1900D08B56 /* AppDelegate.m */,
 				59BC2D9B1997783F00D08B56 /* APLDefaults.h */,
@@ -282,7 +279,6 @@
 				5955BCF0199E8AE9006BF2A2 /* Beacon.m in Sources */,
 				59BC2D9A199773D500D08B56 /* ScanViewController.m in Sources */,
 				59BC2D6D19976B1900D08B56 /* main.m in Sources */,
-				59A9418719A0D14F0018523D /* DbUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
