@@ -109,70 +109,68 @@
 
 
 //get a list of all our employees
-- (NSMutableArray *) getEmployees
+- (NSMutableArray *) getBeacons
 {
-    NSMutableArray *employeeList = [[NSMutableArray alloc] init];
+    NSMutableArray *beaconList = [[NSMutableArray alloc] init];
     const char *dbpath = [databasePath UTF8String];
     sqlite3_stmt    *statement;
     
     if (sqlite3_open(dbpath, &mySqliteDB) == SQLITE_OK)
     {
-        NSString *querySQL = @"SELECT id, name, department, age FROM BEACONS";
+        NSString *querySQL = @"SELECT seq, name, uuid FROM BEACONS";
         const char *query_stmt = [querySQL UTF8String];
         
         if (sqlite3_prepare_v2(mySqliteDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
         {
             while (sqlite3_step(statement) == SQLITE_ROW)
             {
-                Employee *employee = [[Employee alloc] init];
-                employee.employeeID = sqlite3_column_int(statement, 0);
-                employee.name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
-                employee.department = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
-                employee.age = sqlite3_column_int(statement, 3);
-                [employeeList addObject:employee];
+                Beacon *beacon = [[Beacon alloc] init];
+                beacon.seq = sqlite3_column_int(statement, 0);
+                beacon.name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+                beacon.uuid = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
+                [beaconList addObject:beacon];
             }
             sqlite3_finalize(statement);
         }
         sqlite3_close(mySqliteDB);
     }
     
-    return employeeList;
+    return beaconList;
 }
 
 
 //get information about a specfic employee by it's id
-- (Employee *) getEmployee:(NSInteger) employeeID
+- (Beacon *) getBeacon:(NSInteger) seq
 {
-    Employee *employee = [[Employee alloc] init];
+    Beacon *beacon = [[Beacon alloc] init];
     const char *dbpath = [databasePath UTF8String];
     sqlite3_stmt    *statement;
     
     if (sqlite3_open(dbpath, &mySqliteDB) == SQLITE_OK)
     {
         NSString *querySQL = [NSString stringWithFormat:
-                              @"SELECT id, name, department, age FROM EMPLOYEES WHERE id=%d",
-                              employeeID];
+                              @"SELECT seq, name, uuid FROM BEACONS WHERE seq=%d",
+                              (int)seq];
         const char *query_stmt = [querySQL UTF8String];
         
         if (sqlite3_prepare_v2(mySqliteDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
         {
             if (sqlite3_step(statement) == SQLITE_ROW)
             {
-                employee.employeeID = sqlite3_column_int(statement, 0);
-                employee.name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
-                employee.department = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
-                employee.age = sqlite3_column_int(statement, 3);
+                beacon.seq = sqlite3_column_int(statement, 0);
+                beacon.name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+                beacon.uuid = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
             }
             sqlite3_finalize(statement);
         }
         sqlite3_close(mySqliteDB);
     }
     
-    return employee;
+    return beacon;
 }
 
 //delete the employee from the database
-- (BOOL) deleteEmployee:(Employee *)employee
+- (BOOL) deleteBeacon:(Beacon *)beacon
 {
     BOOL success = false;
     sqlite3_stmt *statement = NULL;
@@ -180,13 +178,13 @@
     
     if (sqlite3_open(dbpath, &mySqliteDB) == SQLITE_OK)
     {
-        if (employee.employeeID > 0) {
+        if (beacon.seq > 0) {
             NSLog(@"Exitsing data, Delete Please");
-            NSString *deleteSQL = [NSString stringWithFormat:@"DELETE from EMPLOYEES WHERE id = ?"];
+            NSString *deleteSQL = [NSString stringWithFormat:@"DELETE from BEACONS WHERE seq = ?"];
             
             const char *delete_stmt = [deleteSQL UTF8String];
             sqlite3_prepare_v2(mySqliteDB, delete_stmt, -1, &statement, NULL );
-            sqlite3_bind_int(statement, 1, employee.employeeID);
+            sqlite3_bind_int(statement, 1, (int)beacon.seq);
             if (sqlite3_step(statement) == SQLITE_DONE)
             {
                 success = true;

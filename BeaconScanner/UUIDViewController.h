@@ -7,6 +7,8 @@
 //
 
 @import UIKit;
+#import "Beacon.h"
+#import "DbUtil.h"
 
 @interface UUIDViewController : UITableViewController
 
