@@ -6,12 +6,12 @@
 //  Copyright (c) 2014년 B-Conner. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Beacon : NSObject
+@interface Beacon : NSManagedObject
 
-@property (nonatomic) NSInteger seq;
 @property (nonatomic, strong) NSString *uuid;
 @property (nonatomic, strong) NSString *name;
 
 @end
+ 

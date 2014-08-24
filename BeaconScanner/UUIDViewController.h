@@ -6,9 +6,12 @@
 //  Copyright (c) 2014년 B-Conner. All rights reserved.
 //
 
-@import UIKit;
-#import "Beacon.h"
+#import "AddViewController.h"
 
-@interface UUIDViewController : UITableViewController
+@interface UUIDViewController : UITableViewController <NSFetchedResultsControllerDelegate, AddViewControllerDelegate>
+
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end
+
+ 

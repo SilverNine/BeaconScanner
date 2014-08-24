@@ -10,8 +10,6 @@
 
 @implementation Beacon
 
-@synthesize uuid,name,seq;
-
-
+@synthesize uuid, name;
 
 @end

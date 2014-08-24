@@ -10,6 +10,11 @@
 		592E6CAE19A2410500C1E4E0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592E6CAD19A2410500C1E4E0 /* CoreData.framework */; };
 		5955BCED199E83D2006BF2A2 /* UUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5955BCEC199E83D2006BF2A2 /* UUIDViewController.m */; };
 		5955BCF0199E8AE9006BF2A2 /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5955BCEF199E8AE9006BF2A2 /* Beacon.m */; };
+		596E79B519A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 596E79B319A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodeld */; };
+		596E79B819A9E6A400FF96C5 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596E79B719A9E6A400FF96C5 /* AddViewController.m */; };
+		596E79BB19A9E6BE00FF96C5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596E79BA19A9E6BE00FF96C5 /* DetailViewController.m */; };
+		596E79BE19A9E6DC00FF96C5 /* EditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596E79BD19A9E6DC00FF96C5 /* EditingViewController.m */; };
+		596E79C619AA188C00FF96C5 /* CoreDataBeacons.CDBStore in Resources */ = {isa = PBXBuildFile; fileRef = 596E79C519AA0C7400FF96C5 /* CoreDataBeacons.CDBStore */; };
 		59BC2D6119976B1900D08B56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6019976B1900D08B56 /* Foundation.framework */; };
 		59BC2D6319976B1900D08B56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6219976B1900D08B56 /* CoreGraphics.framework */; };
 		59BC2D6519976B1900D08B56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6419976B1900D08B56 /* UIKit.framework */; };
@@ -39,11 +44,18 @@
 
 /* Begin PBXFileReference section */
 		592E6CAD19A2410500C1E4E0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		5955BCE9199E80A2006BF2A2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5955BCEB199E83D2006BF2A2 /* UUIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDViewController.h; sourceTree = "<group>"; };
 		5955BCEC199E83D2006BF2A2 /* UUIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDViewController.m; sourceTree = "<group>"; };
-		5955BCEE199E8AE9006BF2A2 /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beacon.h; sourceTree = "<group>"; };
-		5955BCEF199E8AE9006BF2A2 /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beacon.m; sourceTree = "<group>"; };
+		5955BCEE199E8AE9006BF2A2 /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Beacon.h; path = BeaconScanner/Beacon.h; sourceTree = "<group>"; };
+		5955BCEF199E8AE9006BF2A2 /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Beacon.m; path = BeaconScanner/Beacon.m; sourceTree = "<group>"; };
+		596E79B419A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataBeacons.xcdatamodel; sourceTree = "<group>"; };
+		596E79B619A9E6A400FF96C5 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		596E79B719A9E6A400FF96C5 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		596E79B919A9E6BE00FF96C5 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		596E79BA19A9E6BE00FF96C5 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		596E79BC19A9E6DC00FF96C5 /* EditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditingViewController.h; sourceTree = "<group>"; };
+		596E79BD19A9E6DC00FF96C5 /* EditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditingViewController.m; sourceTree = "<group>"; };
+		596E79C519AA0C7400FF96C5 /* CoreDataBeacons.CDBStore */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreDataBeacons.CDBStore; sourceTree = "<group>"; };
 		59BC2D5D19976B1900D08B56 /* BeaconScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BC2D6019976B1900D08B56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59BC2D6219976B1900D08B56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,10 +64,10 @@
 		59BC2D6A19976B1900D08B56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		59BC2D6C19976B1900D08B56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59BC2D6E19976B1900D08B56 /* BeaconScanner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeaconScanner-Prefix.pch"; sourceTree = "<group>"; };
-		59BC2D6F19976B1900D08B56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		59BC2D7019976B1900D08B56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		59BC2D6F19976B1900D08B56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BeaconScanner/AppDelegate.h; sourceTree = "<group>"; };
+		59BC2D7019976B1900D08B56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = BeaconScanner/AppDelegate.m; sourceTree = "<group>"; };
 		59BC2D7319976B1900D08B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		59BC2D7B19976B1900D08B56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		59BC2D7B19976B1900D08B56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BeaconScanner/Images.xcassets; sourceTree = "<group>"; };
 		59BC2D8119976B1900D08B56 /* BeaconScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BC2D8219976B1900D08B56 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		59BC2D8A19976B1900D08B56 /* BeaconScannerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeaconScannerTests-Info.plist"; sourceTree = "<group>"; };
@@ -92,10 +104,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		596E79B019A9C4D100FF96C5 /* Model Class */ = {
+			isa = PBXGroup;
+			children = (
+				5955BCEE199E8AE9006BF2A2 /* Beacon.h */,
+				5955BCEF199E8AE9006BF2A2 /* Beacon.m */,
+			);
+			name = "Model Class";
+			sourceTree = "<group>";
+		};
+		596E79B119A9C4EA00FF96C5 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				59BC2D6F19976B1900D08B56 /* AppDelegate.h */,
+				59BC2D7019976B1900D08B56 /* AppDelegate.m */,
+			);
+			name = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		596E79B219A9C50700FF96C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59BC2D7B19976B1900D08B56 /* Images.xcassets */,
+				596E79C519AA0C7400FF96C5 /* CoreDataBeacons.CDBStore */,
+				59BC2D7219976B1900D08B56 /* Main.storyboard */,
+				596E79B319A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		59BC2D5419976B1900D08B56 = {
 			isa = PBXGroup;
 			children = (
-				59BC2D6619976B1900D08B56 /* BeaconScanner */,
+				596E79B219A9C50700FF96C5 /* Resources */,
+				596E79B119A9C4EA00FF96C5 /* Application Delegate */,
+				596E79B019A9C4D100FF96C5 /* Model Class */,
+				59BC2D6619976B1900D08B56 /* View Controllers */,
 				59BC2D8819976B1900D08B56 /* BeaconScannerTests */,
 				59BC2D5F19976B1900D08B56 /* Frameworks */,
 				59BC2D5E19976B1900D08B56 /* Products */,
@@ -115,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				592E6CAD19A2410500C1E4E0 /* CoreData.framework */,
-				5955BCE9199E80A2006BF2A2 /* libsqlite3.dylib */,
 				59BC2D6019976B1900D08B56 /* Foundation.framework */,
 				59BC2D6219976B1900D08B56 /* CoreGraphics.framework */,
 				59BC2D6419976B1900D08B56 /* UIKit.framework */,
@@ -124,23 +167,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		59BC2D6619976B1900D08B56 /* BeaconScanner */ = {
+		59BC2D6619976B1900D08B56 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				59BC2D6F19976B1900D08B56 /* AppDelegate.h */,
-				59BC2D7019976B1900D08B56 /* AppDelegate.m */,
 				59BC2D9B1997783F00D08B56 /* APLDefaults.h */,
 				59BC2D9C1997783F00D08B56 /* APLDefaults.m */,
-				59BC2D98199773D500D08B56 /* ScanViewController.h */,
-				59BC2D99199773D500D08B56 /* ScanViewController.m */,
-				59BC2D7219976B1900D08B56 /* Main.storyboard */,
 				5955BCEB199E83D2006BF2A2 /* UUIDViewController.h */,
 				5955BCEC199E83D2006BF2A2 /* UUIDViewController.m */,
-				5955BCEE199E8AE9006BF2A2 /* Beacon.h */,
-				5955BCEF199E8AE9006BF2A2 /* Beacon.m */,
-				59BC2D7B19976B1900D08B56 /* Images.xcassets */,
+				596E79B619A9E6A400FF96C5 /* AddViewController.h */,
+				596E79B719A9E6A400FF96C5 /* AddViewController.m */,
+				596E79B919A9E6BE00FF96C5 /* DetailViewController.h */,
+				596E79BA19A9E6BE00FF96C5 /* DetailViewController.m */,
+				596E79BC19A9E6DC00FF96C5 /* EditingViewController.h */,
+				596E79BD19A9E6DC00FF96C5 /* EditingViewController.m */,
+				59BC2D98199773D500D08B56 /* ScanViewController.h */,
+				59BC2D99199773D500D08B56 /* ScanViewController.m */,
 				59BC2D6719976B1900D08B56 /* Supporting Files */,
 			);
+			name = "View Controllers";
 			path = BeaconScanner;
 			sourceTree = "<group>";
 		};
@@ -252,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596E79C619AA188C00FF96C5 /* CoreDataBeacons.CDBStore in Resources */,
 				59BC2D7C19976B1900D08B56 /* Images.xcassets in Resources */,
 				59BC2D6B19976B1900D08B56 /* InfoPlist.strings in Resources */,
 				59BC2D7419976B1900D08B56 /* Main.storyboard in Resources */,
@@ -273,12 +318,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596E79B519A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodeld in Sources */,
 				5955BCED199E83D2006BF2A2 /* UUIDViewController.m in Sources */,
+				596E79BB19A9E6BE00FF96C5 /* DetailViewController.m in Sources */,
 				59BC2D7119976B1900D08B56 /* AppDelegate.m in Sources */,
 				59BC2D9D1997783F00D08B56 /* APLDefaults.m in Sources */,
 				5955BCF0199E8AE9006BF2A2 /* Beacon.m in Sources */,
 				59BC2D9A199773D500D08B56 /* ScanViewController.m in Sources */,
+				596E79B819A9E6A400FF96C5 /* AddViewController.m in Sources */,
 				59BC2D6D19976B1900D08B56 /* main.m in Sources */,
+				596E79BE19A9E6DC00FF96C5 /* EditingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +364,7 @@
 				59BC2D7319976B1900D08B56 /* Base */,
 			);
 			name = Main.storyboard;
+			path = BeaconScanner;
 			sourceTree = "<group>";
 		};
 		59BC2D8B19976B1900D08B56 /* InfoPlist.strings */ = {
@@ -501,6 +551,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		596E79B319A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				596E79B419A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodel */,
+			);
+			currentVersion = 596E79B419A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodel */;
+			path = CoreDataBeacons.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 59BC2D5519976B1900D08B56 /* Project object */;
 }
