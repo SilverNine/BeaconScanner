@@ -33,6 +33,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.textField.hidden = NO;
     self.textField.text = [self.editedObject valueForKey:self.editedFieldKey];
     self.textField.placeholder = self.title;
     [self.textField becomeFirstResponder];
@@ -58,6 +59,15 @@
 {
     // Don't pass current value to the edited object, just pop.
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - Manage whether editing a date
+
+- (void)setEditedFieldKey:(NSString *)editedFieldKey
+{
+    if (![_editedFieldKey isEqualToString:editedFieldKey]) {
+        _editedFieldKey = editedFieldKey;
+    }
 }
 
 @end

@@ -35,7 +35,7 @@
          abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        //abort();
     }
 
 }
@@ -77,6 +77,8 @@
     
     // Display the authors' names as section headings.
     return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
+    //return @"";
+
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -95,7 +97,7 @@
              abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
              */
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+            //abort();
         }
     }
 }
@@ -147,7 +149,8 @@
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     // Create and initialize the fetch results controller.
-    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"name" cacheName:@"Root"];
+    //_fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"name" cacheName:@"Root"];
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"];
     _fetchedResultsController.delegate = self;
     
     return _fetchedResultsController;
@@ -212,7 +215,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([[segue identifier] isEqualToString:@"AddBook"]) {
+    if ([[segue identifier] isEqualToString:@"AddBeacon"]) {
         
         /*
          The destination view controller for this segue is an AddViewController to manage addition of the book.
@@ -234,7 +237,7 @@
         addViewController.managedObjectContext = addingContext;
     }
     
-    else if ([[segue identifier] isEqualToString:@"ShowSelectedBook"]) {
+    else if ([[segue identifier] isEqualToString:@"ShowSelectedBeacon"]) {
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Beacon *selectedBeacon = (Beacon *)[[self fetchedResultsController] objectAtIndexPath:indexPath];
@@ -267,7 +270,7 @@
              abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
              */
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+            //abort();
         }
         
         if (![[self.fetchedResultsController managedObjectContext] save:&error]) {
@@ -277,7 +280,7 @@
              abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
              */
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+            //abort();
         }
     }
     

@@ -62,7 +62,7 @@
              abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
              */
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+            //abort();
         }
     }
 }
@@ -110,7 +110,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CoreDataBeacons.CDBStore"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CoreDataBeacons.sqlite"];
     
     /*
      Set up the store.
@@ -119,7 +119,7 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     // If the expected store doesn't exist, copy the default store.
     if (![fileManager fileExistsAtPath:[storeURL path]]) {
-        NSURL *defaultStoreURL = [[NSBundle mainBundle] URLForResource:@"CoreDataBeacons" withExtension:@"CDBStore"];
+        NSURL *defaultStoreURL = [[NSBundle mainBundle] URLForResource:@"CoreDataBeacons" withExtension:@"sqlite"];
         if (defaultStoreURL) {
             [fileManager copyItemAtURL:defaultStoreURL toURL:storeURL error:NULL];
         }
@@ -154,7 +154,7 @@
          
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        //abort();
     }
     
     return _persistentStoreCoordinator;

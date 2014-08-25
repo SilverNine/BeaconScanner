@@ -206,21 +206,6 @@
     [self resignFirstResponder];
 }
 
-
-#pragma mark - Date Formatter
-
-- (NSDateFormatter *)dateFormatter {
-    
-    static NSDateFormatter *dateFormatter = nil;
-    if (dateFormatter == nil) {
-        dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-        [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
-    }
-    return dateFormatter;
-}
-
-
 #pragma mark - Segue management
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
