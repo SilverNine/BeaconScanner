@@ -14,7 +14,7 @@
 		596E79B819A9E6A400FF96C5 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596E79B719A9E6A400FF96C5 /* AddViewController.m */; };
 		596E79BB19A9E6BE00FF96C5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596E79BA19A9E6BE00FF96C5 /* DetailViewController.m */; };
 		596E79BE19A9E6DC00FF96C5 /* EditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596E79BD19A9E6DC00FF96C5 /* EditingViewController.m */; };
-		596E79C619AA188C00FF96C5 /* CoreDataBeacons.CDBStore in Resources */ = {isa = PBXBuildFile; fileRef = 596E79C519AA0C7400FF96C5 /* CoreDataBeacons.CDBStore */; };
+		59ABFD7C19AB69C20041FE91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59ABFD7B19AB69C20041FE91 /* Localizable.strings */; };
 		59BC2D6119976B1900D08B56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6019976B1900D08B56 /* Foundation.framework */; };
 		59BC2D6319976B1900D08B56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6219976B1900D08B56 /* CoreGraphics.framework */; };
 		59BC2D6519976B1900D08B56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6419976B1900D08B56 /* UIKit.framework */; };
@@ -55,7 +55,7 @@
 		596E79BA19A9E6BE00FF96C5 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		596E79BC19A9E6DC00FF96C5 /* EditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditingViewController.h; sourceTree = "<group>"; };
 		596E79BD19A9E6DC00FF96C5 /* EditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditingViewController.m; sourceTree = "<group>"; };
-		596E79C519AA0C7400FF96C5 /* CoreDataBeacons.CDBStore */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreDataBeacons.CDBStore; sourceTree = "<group>"; };
+		59ABFD7B19AB69C20041FE91 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		59BC2D5D19976B1900D08B56 /* BeaconScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BC2D6019976B1900D08B56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59BC2D6219976B1900D08B56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,8 +125,8 @@
 		596E79B219A9C50700FF96C5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				59ABFD7B19AB69C20041FE91 /* Localizable.strings */,
 				59BC2D7B19976B1900D08B56 /* Images.xcassets */,
-				596E79C519AA0C7400FF96C5 /* CoreDataBeacons.CDBStore */,
 				59BC2D7219976B1900D08B56 /* Main.storyboard */,
 				596E79B319A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodeld */,
 			);
@@ -296,8 +296,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				596E79C619AA188C00FF96C5 /* CoreDataBeacons.CDBStore in Resources */,
 				59BC2D7C19976B1900D08B56 /* Images.xcassets in Resources */,
+				59ABFD7C19AB69C20041FE91 /* Localizable.strings in Resources */,
 				59BC2D6B19976B1900D08B56 /* InfoPlist.strings in Resources */,
 				59BC2D7419976B1900D08B56 /* Main.storyboard in Resources */,
 			);
