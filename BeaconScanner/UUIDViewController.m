@@ -61,7 +61,7 @@
     // Configure the cell to show the book's title
     
     Beacon *beacon = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSLog(@"configureCell beacon.uuid : %@", beacon.uuid);
+    // NSLog(@"configureCell beacon.uuid : %@", beacon.uuid);
     cell.textLabel.text = beacon.uuid;
 }
 
@@ -240,7 +240,7 @@
     else if ([[segue identifier] isEqualToString:@"ShowSelectedBeacon"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Beacon *selectedBeacon = (Beacon *)[[self fetchedResultsController] objectAtIndexPath:indexPath];
-        NSLog(@"selectedBeacon.uuid : %@",selectedBeacon.uuid);
+        // NSLog(@"selectedBeacon.uuid : %@",selectedBeacon.uuid);
         // Pass the selected book to the new view controller.
         DetailViewController *detailViewController = (DetailViewController *)[segue destinationViewController];
         detailViewController.beacon = selectedBeacon;
