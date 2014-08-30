@@ -31,8 +31,7 @@
 {
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UINavigationController *navController = tabBarController.viewControllers[0];
-    
-    UUIDViewController *uuidViewController = (UUIDViewController *)navController.topViewController;
+    UUIDViewController *uuidViewController = (UUIDViewController *)[[navController viewControllers] objectAtIndex:0];
     uuidViewController.managedObjectContext = self.managedObjectContext;
 }
 

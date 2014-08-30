@@ -44,8 +44,8 @@
 
 // The data source methods are handled primarily by the fetch results controller
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return [[self.fetchedResultsController sections] count];
+    
 }
 
 // Customize the number of rows in the table view.
@@ -59,15 +59,16 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
     // Configure the cell to show the book's title
+    
     Beacon *beacon = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = beacon.name;
+    NSLog(@"configureCell beacon.uuid : %@", beacon.uuid);
+    cell.textLabel.text = beacon.uuid;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
     // Configure the cell.
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
@@ -135,7 +136,7 @@
     
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
-    } 
+    }
     
     // Create and configure a fetch request with the Book entity.
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -147,12 +148,11 @@
     NSSortDescriptor *uuidDescriptor = [[NSSortDescriptor alloc] initWithKey:@"uuid" ascending:YES];
     NSArray *sortDescriptors = @[nameDescriptor, uuidDescriptor]; 
     [fetchRequest setSortDescriptors:sortDescriptors];
-    
+
     // Create and initialize the fetch results controller.
-    //_fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"name" cacheName:@"Root"];
-    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"];
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"name" cacheName:@"Root"];
+    //_fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"];
     _fetchedResultsController.delegate = self;
-    
     return _fetchedResultsController;
 }
 
@@ -238,10 +238,9 @@
     }
     
     else if ([[segue identifier] isEqualToString:@"ShowSelectedBeacon"]) {
-        
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Beacon *selectedBeacon = (Beacon *)[[self fetchedResultsController] objectAtIndexPath:indexPath];
-        
+        NSLog(@"selectedBeacon.uuid : %@",selectedBeacon.uuid);
         // Pass the selected book to the new view controller.
         DetailViewController *detailViewController = (DetailViewController *)[segue destinationViewController];
         detailViewController.beacon = selectedBeacon;

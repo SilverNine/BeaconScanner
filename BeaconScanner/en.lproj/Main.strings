@@ -1,0 +1,42 @@
+
+/* Class = "IBUINavigationItem"; title = "UUID List"; ObjectID = "149-uz-y8r"; */
+"149-uz-y8r.title" = "UUID List";
+
+/* Class = "IBUILabel"; text = "Name"; ObjectID = "2lS-Rg-1ey"; */
+"2lS-Rg-1ey.text" = "Name";
+
+/* Class = "IBUILabel"; text = "UUID"; ObjectID = "4IO-c5-ey2"; */
+"4IO-c5-ey2.text" = "UUID";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "4TZ-dd-VvM"; */
+"4TZ-dd-VvM.text" = "Detail";
+
+/* Class = "IBUINavigationItem"; title = "Beacon Scan"; ObjectID = "6fT-Pq-Gvo"; */
+"6fT-Pq-Gvo.title" = "Beacon Scan";
+
+/* Class = "IBUINavigationItem"; title = "Info"; ObjectID = "75h-Mx-S1R"; */
+"75h-Mx-S1R.title" = "Info";
+
+/* Class = "IBUILabel"; text = "UUID"; ObjectID = "Gks-vm-53e"; */
+"Gks-vm-53e.text" = "UUID";
+
+/* Class = "IBUITabBarItem"; title = "Item"; ObjectID = "MzB-mH-9PD"; */
+"MzB-mH-9PD.title" = "Item";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "OoN-N3-xCi"; */
+"OoN-N3-xCi.text" = "Detail";
+
+/* Class = "IBUINavigationItem"; title = "New Beacon"; ObjectID = "PVa-0Y-vTZ"; */
+"PVa-0Y-vTZ.title" = "New Beacon";
+
+/* Class = "IBUILabel"; text = "Name"; ObjectID = "VY0-kF-Igm"; */
+"VY0-kF-Igm.text" = "Name";
+
+/* Class = "IBUITabBarItem"; title = "Item"; ObjectID = "bWS-Gg-79f"; */
+"bWS-Gg-79f.title" = "Item";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "hm4-lj-VrE"; */
+"hm4-lj-VrE.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "x7W-Bp-gsW"; */
+"x7W-Bp-gsW.text" = "Detail";

@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		592E6CAE19A2410500C1E4E0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592E6CAD19A2410500C1E4E0 /* CoreData.framework */; };
 		5955BCED199E83D2006BF2A2 /* UUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5955BCEC199E83D2006BF2A2 /* UUIDViewController.m */; };
-		5955BCF0199E8AE9006BF2A2 /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5955BCEF199E8AE9006BF2A2 /* Beacon.m */; };
 		596E79B519A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 596E79B319A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodeld */; };
 		596E79B819A9E6A400FF96C5 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596E79B719A9E6A400FF96C5 /* AddViewController.m */; };
 		596E79BB19A9E6BE00FF96C5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596E79BA19A9E6BE00FF96C5 /* DetailViewController.m */; };
 		596E79BE19A9E6DC00FF96C5 /* EditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596E79BD19A9E6DC00FF96C5 /* EditingViewController.m */; };
+		59755D9019B209C100D171F7 /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 59755D8F19B209C100D171F7 /* Beacon.m */; };
 		59ABFD7C19AB69C20041FE91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59ABFD7B19AB69C20041FE91 /* Localizable.strings */; };
 		59BC2D6119976B1900D08B56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6019976B1900D08B56 /* Foundation.framework */; };
 		59BC2D6319976B1900D08B56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC2D6219976B1900D08B56 /* CoreGraphics.framework */; };
@@ -44,10 +44,9 @@
 
 /* Begin PBXFileReference section */
 		592E6CAD19A2410500C1E4E0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		59330AE819ACCAD8006EC2C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		5955BCEB199E83D2006BF2A2 /* UUIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDViewController.h; sourceTree = "<group>"; };
 		5955BCEC199E83D2006BF2A2 /* UUIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDViewController.m; sourceTree = "<group>"; };
-		5955BCEE199E8AE9006BF2A2 /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Beacon.h; path = BeaconScanner/Beacon.h; sourceTree = "<group>"; };
-		5955BCEF199E8AE9006BF2A2 /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Beacon.m; path = BeaconScanner/Beacon.m; sourceTree = "<group>"; };
 		596E79B419A9D05A00FF96C5 /* CoreDataBeacons.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataBeacons.xcdatamodel; sourceTree = "<group>"; };
 		596E79B619A9E6A400FF96C5 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		596E79B719A9E6A400FF96C5 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
@@ -55,6 +54,8 @@
 		596E79BA19A9E6BE00FF96C5 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		596E79BC19A9E6DC00FF96C5 /* EditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditingViewController.h; sourceTree = "<group>"; };
 		596E79BD19A9E6DC00FF96C5 /* EditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditingViewController.m; sourceTree = "<group>"; };
+		59755D8E19B209C100D171F7 /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Beacon.h; path = BeaconScanner/Beacon.h; sourceTree = "<group>"; };
+		59755D8F19B209C100D171F7 /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Beacon.m; path = BeaconScanner/Beacon.m; sourceTree = "<group>"; };
 		59ABFD7B19AB69C20041FE91 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		59BC2D5D19976B1900D08B56 /* BeaconScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BC2D6019976B1900D08B56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,8 +108,8 @@
 		596E79B019A9C4D100FF96C5 /* Model Class */ = {
 			isa = PBXGroup;
 			children = (
-				5955BCEE199E8AE9006BF2A2 /* Beacon.h */,
-				5955BCEF199E8AE9006BF2A2 /* Beacon.m */,
+				59755D8E19B209C100D171F7 /* Beacon.h */,
+				59755D8F19B209C100D171F7 /* Beacon.m */,
 			);
 			name = "Model Class";
 			sourceTree = "<group>";
@@ -323,9 +324,9 @@
 				596E79BB19A9E6BE00FF96C5 /* DetailViewController.m in Sources */,
 				59BC2D7119976B1900D08B56 /* AppDelegate.m in Sources */,
 				59BC2D9D1997783F00D08B56 /* APLDefaults.m in Sources */,
-				5955BCF0199E8AE9006BF2A2 /* Beacon.m in Sources */,
 				59BC2D9A199773D500D08B56 /* ScanViewController.m in Sources */,
 				596E79B819A9E6A400FF96C5 /* AddViewController.m in Sources */,
+				59755D9019B209C100D171F7 /* Beacon.m in Sources */,
 				59BC2D6D19976B1900D08B56 /* main.m in Sources */,
 				596E79BE19A9E6DC00FF96C5 /* EditingViewController.m in Sources */,
 			);
@@ -362,6 +363,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				59BC2D7319976B1900D08B56 /* Base */,
+				59330AE819ACCAD8006EC2C6 /* en */,
 			);
 			name = Main.storyboard;
 			path = BeaconScanner;
