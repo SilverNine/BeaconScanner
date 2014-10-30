@@ -56,6 +56,14 @@
     // Redisplay the data.
     [self updateInterface];
     [self updateRightBarButtonItemState];
+    
+    if(self.nameLabel.text.length < 1){
+        self.nameLabel.text = @"Beacon Name";
+    }
+    
+    if(self.uuidLabel.text.length < 1){
+        self.uuidLabel.text = @"UUID";
+    }
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
@@ -89,7 +97,6 @@
 }
 
 - (void)updateInterface {
-
     self.nameLabel.text = self.beacon.name;
     self.uuidLabel.text = self.beacon.uuid;
 }

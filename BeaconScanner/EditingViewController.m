@@ -44,14 +44,23 @@
 
 - (IBAction)save:(id)sender
 {
-    // Set the action name for the undo operation.
-    NSUndoManager * undoManager = [[self.editedObject managedObjectContext] undoManager];
-    [undoManager setActionName:[NSString stringWithFormat:@"%@", self.editedFieldName]];
-
-    // Pass current value to the edited object, then pop
-    [self.editedObject setValue:self.textField.text forKey:self.editedFieldKey];
-    
-    [self.navigationController popViewControllerAnimated:YES];
+    if(self.textField.text.length > 0){
+        // Set the action name for the undo operation.
+        NSUndoManager * undoManager = [[self.editedObject managedObjectContext] undoManager];
+        [undoManager setActionName:[NSString stringWithFormat:@"%@", self.editedFieldName]];
+        
+        // Pass current value to the edited object, then pop
+        [self.editedObject setValue:self.textField.text forKey:self.editedFieldKey];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"잠시만요!"
+                                                           message:@"내용을 입력해주세요."
+                                                          delegate:self
+                                                 cancelButtonTitle:@"OK"
+                                                 otherButtonTitles:nil];
+        [theAlert show];
+    }
 }
 
 
