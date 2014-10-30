@@ -6,13 +6,12 @@
 //  Copyright (c) 2014년 B-Conner. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
 
 @interface Beacon : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * uuid;
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * uuid;
 
 @end

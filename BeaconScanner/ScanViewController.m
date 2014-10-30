@@ -8,6 +8,8 @@
 
 #import "ScanViewController.h"
 #import "APLDefaults.h"
+#import "Beacon.h"
+
 @import CoreLocation;
 
 @interface ScanViewController () <CLLocationManagerDelegate>
@@ -24,20 +26,16 @@
 {
     [super viewDidLoad];
     
-    self.beacons = [[NSMutableDictionary alloc] init];
-    
     // This location manager will be used to demonstrate how to range beacons.
     self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.delegate = self;
     
-    // Populate the regions we will range once.
-    self.rangedRegions = [[NSMutableDictionary alloc] init];
-    
-    for (NSUUID *uuid in [APLDefaults sharedDefaults].supportedProximityUUIDs)
+    // New iOS 8 request for Always Authorization, required for iBeacons to work!
+    if([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
     {
-        CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:[uuid UUIDString]];
-        self.rangedRegions[region] = [NSArray array];
+        [self.locationManager requestAlwaysAuthorization];
     }
+    
+    self.locationManager.delegate = self;
 }
 
 
@@ -45,11 +43,41 @@
 {
     [super viewDidAppear:animated];
     
+    /*
+     * Search 탭으로 올때마다 초기화 비콘목록 가져오기
+     */
+    self.beacons = [[NSMutableDictionary alloc] init];
+    
+    // Populate the regions we will range once.
+    self.rangedRegions = [[NSMutableDictionary alloc] init];
+    
+
+    NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
+    fetch.entity = [NSEntityDescription entityForName:@"Beacon"
+                               inManagedObjectContext:self.managedObjectContext];
+    
+    NSError *error = nil;
+    NSArray *objects = [self.managedObjectContext executeFetchRequest:fetch error:&error];
+    if (error) {
+        NSLog(@"Failed to fetch objects: %@", [error description]);
+    }
+    
+    for (Beacon *beacon in objects) {
+        NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:beacon.uuid];
+        
+        CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:[uuid UUIDString]];
+        self.rangedRegions[region] = [NSArray array];
+    }
+    
+    // NSLog(@"count = %lu",(unsigned long)objects.count);
+
     // Start ranging when the view appears.
     for (CLBeaconRegion *region in self.rangedRegions)
     {
         [self.locationManager startRangingBeaconsInRegion:region];
     }
+    
+    //printf("start scan\n");
 }
 
 
@@ -62,6 +90,8 @@
     {
         [self.locationManager stopRangingBeaconsInRegion:region];
     }
+    
+    //printf("stop scan\n");
 }
 
 
@@ -93,7 +123,7 @@
             self.beacons[range] = proximityBeacons;
         }
     }
-    
+
     [self.tableView reloadData];
 }
 
@@ -146,8 +176,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	static NSString *identifier = @"Cell";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+
+	//static NSString *identifier = @"Cell";
+	//UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     // Display the UUID, major, minor and accuracy for each beacon.
     NSNumber *sectionKey = [self.beacons allKeys][indexPath.section];

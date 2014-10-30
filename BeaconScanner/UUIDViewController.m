@@ -57,9 +57,6 @@
 
 // Customize the appearance of table view cells.
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    
-    // Configure the cell to show the book's title
-    
     Beacon *beacon = [self.fetchedResultsController objectAtIndexPath:indexPath];
     // NSLog(@"configureCell beacon.uuid : %@", beacon.uuid);
     cell.textLabel.text = beacon.uuid;
@@ -193,7 +190,6 @@
 - (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
 {
     switch(type) {
-            
         case NSFetchedResultsChangeInsert:
             [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
             break;

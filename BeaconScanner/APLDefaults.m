@@ -49,7 +49,7 @@
 #import "APLDefaults.h"
 
 
-NSString *BeaconIdentifier = @"com.example.apple-samplecode.AirLocate";
+NSString *BeaconIdentifier = @"com.bcorner";
 
 
 @implementation APLDefaults

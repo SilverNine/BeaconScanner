@@ -47,7 +47,7 @@
     // Set the action name for the undo operation.
     NSUndoManager * undoManager = [[self.editedObject managedObjectContext] undoManager];
     [undoManager setActionName:[NSString stringWithFormat:@"%@", self.editedFieldName]];
-    
+
     // Pass current value to the edited object, then pop
     [self.editedObject setValue:self.textField.text forKey:self.editedFieldKey];
     
@@ -59,15 +59,6 @@
 {
     // Don't pass current value to the edited object, just pop.
     [self.navigationController popViewControllerAnimated:YES];
-}
-
-#pragma mark - Manage whether editing a date
-
-- (void)setEditedFieldKey:(NSString *)editedFieldKey
-{
-    if (![_editedFieldKey isEqualToString:editedFieldKey]) {
-        _editedFieldKey = editedFieldKey;
-    }
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "UUIDViewController.h"
+#import "ScanViewController.h"
+#import "Beacon.h"
 
 @interface AppDelegate ()
 
@@ -33,6 +35,44 @@
     UINavigationController *navController = tabBarController.viewControllers[0];
     UUIDViewController *uuidViewController = (UUIDViewController *)[[navController viewControllers] objectAtIndex:0];
     uuidViewController.managedObjectContext = self.managedObjectContext;
+    
+    UINavigationController *scanNavController = tabBarController.viewControllers[1];
+    ScanViewController *scanViewController = (ScanViewController *)[[scanNavController viewControllers] objectAtIndex:0];
+    scanViewController.managedObjectContext = self.managedObjectContext;
+
+    NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
+    fetch.entity = [NSEntityDescription entityForName:@"Beacon"
+                               inManagedObjectContext:self.managedObjectContext];
+    
+    fetch.predicate = [NSPredicate predicateWithFormat:@"name LIKE[c] '(Default) Apple Airlocate'"];
+    
+    NSError *error = nil;
+    NSArray *objects = [self.managedObjectContext executeFetchRequest:fetch error:&error];
+    if (error) {
+        NSLog(@"Failed to fetch objects: %@", [error description]);
+    }
+    
+    // NSLog(@"count = %lu",(unsigned long)objects.count);
+
+    if(objects.count < 3){
+        NSArray *supportedProximityUUIDs;
+        
+        supportedProximityUUIDs = @[@"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0",
+                                    @"5A4BCFCE-174E-4BAC-A814-092E77F6B7E5",
+                                    @"74278BDA-B644-4520-8F0C-720EAF059935"];
+        
+        for (NSString *uuid in supportedProximityUUIDs)
+        {
+            Beacon *entity = [NSEntityDescription insertNewObjectForEntityForName:@"Beacon" inManagedObjectContext:self.managedObjectContext];
+            entity.name = @"(Default) Apple Airlocate";
+            entity.uuid = uuid;
+            
+            NSError *error = nil;
+            if ([self.managedObjectContext save:&error] == NO) {
+                NSLog(@"Failed to add entity: %@", [error description]);
+            }
+        }
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
