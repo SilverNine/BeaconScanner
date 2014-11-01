@@ -31,7 +31,21 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
+    [NSThread sleepForTimeInterval:2.0f];
+
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UITabBar *tabBar = tabBarController.tabBar;
+    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
+    
+    tabBarItem1.selectedImage = [[UIImage imageNamed:@"listSelected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    tabBarItem1.image = [[UIImage imageNamed:@"list"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    tabBarItem1.title = @"UUID List";
+    
+    tabBarItem2.selectedImage = [[UIImage imageNamed:@"searchSelected"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    tabBarItem2.image = [[UIImage imageNamed:@"search"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    tabBarItem2.title = @"Beacon Search";
+
     UINavigationController *navController = tabBarController.viewControllers[0];
     UUIDViewController *uuidViewController = (UUIDViewController *)[[navController viewControllers] objectAtIndex:0];
     uuidViewController.managedObjectContext = self.managedObjectContext;
@@ -44,7 +58,7 @@
     fetch.entity = [NSEntityDescription entityForName:@"Beacon"
                                inManagedObjectContext:self.managedObjectContext];
     
-    fetch.predicate = [NSPredicate predicateWithFormat:@"name LIKE[c] '(Default) Apple Airlocate'"];
+    fetch.predicate = [NSPredicate predicateWithFormat:@"name LIKE[c] '( Default ) Apple Airlocate'"];
     
     NSError *error = nil;
     NSArray *objects = [self.managedObjectContext executeFetchRequest:fetch error:&error];
@@ -64,7 +78,7 @@
         for (NSString *uuid in supportedProximityUUIDs)
         {
             Beacon *entity = [NSEntityDescription insertNewObjectForEntityForName:@"Beacon" inManagedObjectContext:self.managedObjectContext];
-            entity.name = @"(Default) Apple Airlocate";
+            entity.name = @"( Default ) Apple Airlocate";
             entity.uuid = uuid;
             
             NSError *error = nil;

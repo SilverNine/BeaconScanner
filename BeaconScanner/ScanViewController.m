@@ -30,9 +30,9 @@
     self.locationManager = [[CLLocationManager alloc] init];
     
     // New iOS 8 request for Always Authorization, required for iBeacons to work!
-    if([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
+    if([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
     {
-        [self.locationManager requestAlwaysAuthorization];
+        [self.locationManager requestWhenInUseAuthorization];
     }
     
     self.locationManager.delegate = self;
