@@ -14,6 +14,7 @@
 @interface DetailViewController ()
 
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+
 @property (nonatomic, weak) IBOutlet UILabel *uuidLabel;
 
 @end

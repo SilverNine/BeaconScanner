@@ -7,7 +7,6 @@
 //
 
 #import "ScanViewController.h"
-#import "APLDefaults.h"
 #import "Beacon.h"
 
 @import CoreLocation;
@@ -15,7 +14,9 @@
 @interface ScanViewController () <CLLocationManagerDelegate>
 
 @property NSMutableDictionary *beacons;
+
 @property CLLocationManager *locationManager;
+
 @property NSMutableDictionary *rangedRegions;
 
 @end

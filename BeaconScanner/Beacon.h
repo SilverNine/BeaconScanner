@@ -12,6 +12,7 @@
 @interface Beacon : NSManagedObject
 
 @property (nonatomic, strong) NSString * name;
+
 @property (nonatomic, strong) NSString * uuid;
 
 @end

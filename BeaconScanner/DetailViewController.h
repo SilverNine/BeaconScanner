@@ -17,6 +17,7 @@
 @interface DetailViewController (Private)
 
 - (void)setUpUndoManager;
+
 - (void)cleanUpUndoManager;
 
 @end

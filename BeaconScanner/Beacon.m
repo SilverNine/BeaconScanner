@@ -11,6 +11,7 @@
 
 @implementation Beacon
 
+
 @dynamic name, uuid;
 
 @end

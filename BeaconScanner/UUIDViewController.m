@@ -13,6 +13,7 @@
 @interface UUIDViewController ()
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+
 @property (nonatomic, strong) UIBarButtonItem *rightBarButtonItem;
 
 @end

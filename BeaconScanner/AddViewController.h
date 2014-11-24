@@ -15,6 +15,7 @@
 @interface AddViewController : DetailViewController
 
 @property (nonatomic, weak) id <AddViewControllerDelegate> delegate;
+
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end
