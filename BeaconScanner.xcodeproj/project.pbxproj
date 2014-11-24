@@ -48,7 +48,6 @@
 		59BC2D8D19976B1900D08B56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59BC2D8B19976B1900D08B56 /* InfoPlist.strings */; };
 		59BC2D8F19976B1900D08B56 /* BeaconScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BC2D8E19976B1900D08B56 /* BeaconScannerTests.m */; };
 		59BC2D9A199773D500D08B56 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BC2D99199773D500D08B56 /* ScanViewController.m */; };
-		59BC2D9D1997783F00D08B56 /* APLDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BC2D9C1997783F00D08B56 /* APLDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,8 +113,6 @@
 		59BC2D8E19976B1900D08B56 /* BeaconScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconScannerTests.m; sourceTree = "<group>"; };
 		59BC2D98199773D500D08B56 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		59BC2D99199773D500D08B56 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
-		59BC2D9B1997783F00D08B56 /* APLDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLDefaults.h; sourceTree = "<group>"; };
-		59BC2D9C1997783F00D08B56 /* APLDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLDefaults.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,8 +225,6 @@
 		59BC2D6619976B1900D08B56 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				59BC2D9B1997783F00D08B56 /* APLDefaults.h */,
-				59BC2D9C1997783F00D08B56 /* APLDefaults.m */,
 				5955BCEB199E83D2006BF2A2 /* UUIDViewController.h */,
 				5955BCEC199E83D2006BF2A2 /* UUIDViewController.m */,
 				596E79B619A9E6A400FF96C5 /* AddViewController.h */,
@@ -404,7 +399,6 @@
 				5955BCED199E83D2006BF2A2 /* UUIDViewController.m in Sources */,
 				596E79BB19A9E6BE00FF96C5 /* DetailViewController.m in Sources */,
 				59BC2D7119976B1900D08B56 /* AppDelegate.m in Sources */,
-				59BC2D9D1997783F00D08B56 /* APLDefaults.m in Sources */,
 				59BC2D9A199773D500D08B56 /* ScanViewController.m in Sources */,
 				596E79B819A9E6A400FF96C5 /* AddViewController.m in Sources */,
 				59755D9019B209C100D171F7 /* Beacon.m in Sources */,
